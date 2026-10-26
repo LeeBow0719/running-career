@@ -254,15 +254,15 @@ background:#101a2c;border:1px solid #1a2438;font-size:12.5px}
 .coach{background:linear-gradient(165deg,#0e1728 0%,#0b1220 62%);border:1px solid #1c2842;border-radius:12px;overflow:hidden}
 .coach-top{padding:14px 16px 13px;border-bottom:1px solid #1a2438;
 background:linear-gradient(104deg,rgba(34,211,238,.10),rgba(251,191,36,.055) 58%,transparent)}
-.coach-t{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:8px}
-.coach-t b{font-size:11px;letter-spacing:1.4px;color:#22d3ee;font-weight:700}
-.coach-t i{font-style:normal;font-size:10.5px;color:#5b6b86;margin-left:auto}
+.coach-t{display:flex;justify-content:flex-end;margin-bottom:6px}
+.coach-t i{font-style:normal;font-size:10.5px;color:#4b5a75;letter-spacing:.3px;
+font-family:Consolas,"JetBrains Mono",monospace}
 .coach-h{font-size:19.5px;line-height:1.42;font-weight:700;color:#eef6ff;letter-spacing:.2px;
 text-shadow:0 0 22px rgba(34,211,238,.22)}
 .coach-h em{font-style:normal;color:#fcd34d}
 .coach-sub{margin-top:7px;font-size:12.5px;line-height:1.72;color:#8fa3bd}
-.coach-body{display:grid;grid-template-columns:1.08fr .92fr}
-.diag{padding:13px 16px 14px;border-right:1px solid #16202f}
+.coach-body{display:block}
+.diag{padding:13px 16px 15px}
 .diag ul{margin:0;padding:0;list-style:none}
 .diag li{position:relative;font-size:12.5px;line-height:1.72;color:#b3c2d8;margin-bottom:9px;padding-left:2px}
 .diag li:last-child{margin-bottom:0}
@@ -270,23 +270,22 @@ text-shadow:0 0 22px rgba(34,211,238,.22)}
 .dpill{display:inline-block;font-size:10px;line-height:1.6;padding:0 7px;border-radius:999px;margin-right:7px;
 background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.28);color:#67e8f9;
 letter-spacing:.4px;vertical-align:1px;white-space:nowrap}
-.side{padding:13px 16px 14px;background:rgba(8,13,23,.42)}
-.side-h{font-size:11px;color:#9fb3cd;font-weight:600;letter-spacing:.6px;margin-bottom:7px}
-.side-h i{font-style:normal;font-weight:400;font-size:10px;color:#4b5a75;margin-left:6px;letter-spacing:0}
-.side-h+.clist{margin-bottom:14px}
-.clist{margin:0;padding-left:15px}
-.clist li{font-size:12px;line-height:1.68;color:#b3c2d8;margin-bottom:5px}
-.clist li b{color:#7ee2c0}
-.clist.rule li{color:#9fb3cd}
-.clist.rule li::marker{content:"▪ ";color:#fcd34d}
-.clist li.cok{color:#86efac}
-.clist li.cwarn{color:#fcd34d}
-.clist li.csum{list-style:none;margin-left:-15px;color:#93a4bf;border-bottom:1px dashed #1f2b40;
-padding-bottom:6px;margin-bottom:7px;font-size:11.5px}
-.clist li.csum b{color:#e2e8f0}
 .planbox h3{margin-bottom:9px}
-@media(max-width:820px){.coach-body{grid-template-columns:1fr}
-.diag{border-right:0;border-bottom:1px solid #16202f}.coach-h{font-size:17px}}
+/* 折叠屏内屏 / 小平板（华为 Mate X6 展开约 748px，横屏约 835px） */
+@media(min-width:641px) and (max-width:900px){
+.wk7{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.wkd{min-height:104px}
+.wkpis{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 6px}
+.wkpis b{font-size:15px}
+.coach-h{font-size:18px}
+.diag li{font-size:12px}
+.card{padding:15px 15px}
+.grid{grid-template-columns:repeat(3,1fr);gap:10px}
+}
+@media(max-width:640px){.coach-h{font-size:17px}.coach-top{padding:12px 13px 11px}
+.diag{padding:11px 13px 13px}
+.wkpis{grid-template-columns:repeat(3,1fr);gap:8px 4px}.wkpis b{font-size:14px}
+.wkpis small{font-size:9.5px}}
 .wkbox h3 span{font-weight:400;font-size:10.5px;color:#5b6b86;margin-left:6px}
 .wplan{width:100%;border-collapse:collapse;font-size:12px}
 .wplan th{text-align:left;font-size:10.5px;color:#64748b;font-weight:500;padding:2px 6px 6px;border-bottom:1px solid #1a2438}
@@ -313,7 +312,7 @@ border-left:3px solid #22d3ee;max-height:300px;overflow:auto}
 background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.3);letter-spacing:.3px}
 /* 关键观点：高亮块，数字金色 */
 .repk{background:linear-gradient(96deg,rgba(251,191,36,.11),rgba(34,211,238,.05) 65%,transparent);
-border-left:3px solid #fbbf24;border-radius:0 9px 9px 0;padding:9px 12px 9px 11px;margin-bottom:9px}
+border-left:3px solid #fbbf24;border-radius:0 9px 9px 0;padding:10px 12px 10px 11px;margin-bottom:9px}
 .repk-t{font-size:10px;letter-spacing:1.3px;color:#fbbf24;font-weight:700;margin-bottom:5px}
 .repk ul{margin:0;padding:0;list-style:none}
 .repk li{position:relative;font-size:13px;line-height:1.7;color:#eaf2fd;padding-left:13px;margin-bottom:4px}
@@ -424,12 +423,12 @@ input:focus{border-color:#22d3ee;box-shadow:0 0 0 2px rgba(34,211,238,.15)}
 <div class="kpi"><b>8.5 km</b><small>单次平均距离</small></div>
 </div>
 
-<div class="card sec" id="secWeek"><h2>近一周训练情况 <span>近 7 天 · 每天自动更新 · 点方块展开训练报告，再点收起</span></h2>
+<div class="card sec" id="secWeek"><h2>近一周训练情况</h2>
 <div class='wkhead'><div class='wk7'><div class='wkd rest'><div class='wkd-h'><b>周二</b><i>10-20</i></div><div class='wkd-rest'>休息</div></div><div class='wkd easy' data-id='481194399775097632' title='点击展开训练报告，再点收起'><div class='wkd-h'><b>周三</b><i>10-21</i></div><div class='wkd-km'>10.01<small>km</small></div><div class='wkd-p'>6'05"<small>/km</small></div><div class='wkd-row'><span class='wtag'>轻松</span><span>136 bpm</span></div><div class='wkd-meta'>TL 93　 · 报告</div><div class='wkd-name'>湖州市</div></div><div class='wkd rest'><div class='wkd-h'><b>周四</b><i>10-22</i></div><div class='wkd-rest'>休息</div></div><div class='wkd rest'><div class='wkd-h'><b>周五</b><i>10-23</i></div><div class='wkd-rest'>休息</div></div><div class='wkd rest'><div class='wkd-h'><b>周六</b><i>10-24</i></div><div class='wkd-rest'>休息</div></div><div class='wkd race' data-id='481275203949723648' title='点击展开训练报告，再点收起'><div class='wkd-h'><b>周日</b><i>10-25</i></div><div class='wkd-km'>21.26<small>km</small></div><div class='wkd-p'>4'52"<small>/km</small></div><div class='wkd-row'><span class='wtag'>比赛</span><span>173 bpm</span></div><div class='wkd-meta'>TL 536　 · 报告</div><div class='wkd-name'>2026桐庐半程马拉松</div></div><div class='wkd rest'><div class='wkd-h'><b>周一</b><i>10-26</i></div><div class='wkd-rest'>休息</div></div></div></div><div class='wkpis'><div><b>31.3</b><small>近 7 天 km</small></div><div><b>2</b><small>次数</small></div><div><b>2.7</b><small>小时</small></div><div><b>5'28"</b><small>平均配速</small></div><div><b>154 bpm</b><small>平均心率</small></div><div><b>629</b><small>总负荷</small></div></div>
 <div id="detWeek"></div></div>
 
-<div class="card sec" id="secAdvice"><h2>下阶段训练建议 <span>教练视角 · 基于全部训练数据 · 每日重算</span></h2>
-<div class='wadv'><div class='coach'><div class='coach-top'><div class='coach-t'><b>教练诊断</b><i>基于全部 420 次 / 3550 km 数据 · 更新于 10-26 11:13</i></div><div class='coach-h'>现在别练，先把桐庐的账还完</div><div class='coach-sub'>比赛后第 1 天，肌肉微损伤和电解质紊乱需要满 72 小时才能修复。这几天任何一次「动一动」都是负收益，休息本身就是这次训练的一部分。</div></div><div class='coach-body'><div class='diag'><ul><li><span class='dpill'>能力</span>速度储备够用，<b>差的是把它完整带过终点</b>。半马 PB 1:41:23，距 1:40:00 差 1'22"，要把均配从 4'48" 压到 4'44"——而桐庐前 15km 你已经跑出过 4'39"，说明这个配速对你不是天花板。</li><li><span class='dpill'>跑量</span>近 5 周 <b>30 · 47 · 42 · 48 · 31</b> km，本周 31 km 较四周均值（42 km）<b>-25%</b>。生涯累计 420 次 / 3550 km，最长 21.4 km。这个回落是赛后恢复期的正常值，不是退步。</li><li><span class='dpill'>强度</span>节奏没问题，<b>别堆</b>。近 90 天强度/比赛 <b>2</b> 次（约每周 0.2 次）、长距离（≥13km）<b>13</b> 次 —— 强度守住了上限，长距离密度是当前最该保住的资产。</li><li><span class='dpill'>状态</span><b>恢复窗口已过，可以开始恢复性强度</b>。赛后第 1 天，先做 2 次心率 <145 的轻松跑，确认晨起心率和腿部无异常，再上周三那次阈值课。</li><li><span class='dpill'>赛程</span><b>三场按「以赛代练」走，不为单场加量</b>。下一场 2026徽商银行合肥马拉松（11/08，半程）还有 <b>13</b> 天；间隔 7 / 14 天，合肥、长沙当作高质量长距离，把冲击留给黄山。</li></ul></div><div class='side'><div class='side-h'>执行对照 <i>上次建议 vs 实际完成</i></div><ul class='clist'><li class='cok'>暂无已到期的建议需要对照。</li></ul><div class='side-h'>红线 <i>踩到就停</i></div><ul class='clist rule'><li>每周 <b>最多 1 次</b>强度课，主课间隔 ≥3 天——本周那次跑完就收手，别自己加练。</li><li>轻松跑心率红线 <b>145</b>（上限 150），5'33"/km 以内都算跑快了。</li><li>晨起静息心率连续 2 天 +5bpm、或关节锐痛 → <b>当周直接砍掉强度课</b>，先恢复再谈配速。</li></ul></div></div></div><div class='wkbox planbox'><h3>未来 7 天安排 <span>按此执行，次日在上方「执行对照」里核对</span></h3><table class='wplan'><thead><tr><th>日期</th><th>类型</th><th>内容</th></tr></thead><tbody><tr><td class='pd'>10-26 <i>周一</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-27 <i>周二</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-28 <i>周三</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-29 <i>周四</i></td><td><span class='wtag easy'>轻松</span></td><td class='pt'>恢复跑 30–40 分钟，心率 <145，配速 5'45"–6'05"</td></tr><tr><td class='pd'>10-30 <i>周五</i></td><td><span class='wtag easy'>轻松</span></td><td class='pt'>恢复跑 30–40 分钟，心率 <145，配速 5'45"–6'05"</td></tr><tr><td class='pd'>10-31 <i>周六</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 / 散步拉伸</td></tr><tr><td class='pd'>11-01 <i>周日</i></td><td><span class='wtag long'>长距离</span></td><td class='pt'>长距离 12–14 km（赛后恢复期，保守执行），心率 <155</td></tr></tbody></table></div></div></div>
+<div class="card sec" id="secAdvice"><h2>下阶段训练建议</h2>
+<div class='wadv'><div class='coach'><div class='coach-top'><div class='coach-t'><i>更新于 10-26 11:27</i></div><div class='coach-h'>现在别练，先把桐庐的账还完</div><div class='coach-sub'>比赛后第 1 天，肌肉微损伤和电解质紊乱需要满 72 小时才能修复。这几天任何一次「动一动」都是负收益，休息本身就是这次训练的一部分。</div></div><div class='coach-body'><div class='diag'><ul><li><span class='dpill'>能力</span>速度储备够用，<b>差的是把它完整带过终点</b>。半马 PB 1:41:23，距 1:40:00 差 1'22"，要把均配从 4'48" 压到 4'44"——而桐庐前 15km 你已经跑出过 4'39"，说明这个配速对你不是天花板。</li><li><span class='dpill'>跑量</span>近 5 周 <b>30 · 47 · 42 · 48 · 31</b> km，本周 31 km 较四周均值（42 km）<b>-25%</b>。生涯累计 420 次 / 3550 km，最长 21.4 km。这个回落是赛后恢复期的正常值，不是退步。</li><li><span class='dpill'>强度</span>节奏没问题，<b>别堆</b>。近 90 天强度/比赛 <b>2</b> 次（约每周 0.2 次）、长距离（≥13km）<b>13</b> 次 —— 强度守住了上限，长距离密度是当前最该保住的资产。</li><li><span class='dpill'>状态</span><b>恢复窗口已过，可以开始恢复性强度</b>。赛后第 1 天，先做 2 次心率 <145 的轻松跑，确认晨起心率和腿部无异常，再上周三那次阈值课。</li><li><span class='dpill'>赛程</span><b>三场按「以赛代练」走，不为单场加量</b>。下一场 2026徽商银行合肥马拉松（11/08，半程）还有 <b>13</b> 天；间隔 7 / 14 天，合肥、长沙当作高质量长距离，把冲击留给黄山。</li><li><span class='dpill'>红线</span>每周 <b>≤1 次</b>强度课（间隔 ≥3 天）、轻松跑心率守 <b>145</b>（5'33"/km 以内）、晨起静息心率连续 2 天 +5bpm 或关节锐痛就砍掉当周强度——这三条踩了，练得越多退得越狠。</li></ul></div></div></div><div class='wkbox planbox'><h3>未来 7 天安排</h3><table class='wplan'><thead><tr><th>日期</th><th>类型</th><th>内容</th></tr></thead><tbody><tr><td class='pd'>10-26 <i>周一</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-27 <i>周二</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-28 <i>周三</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 · 睡眠优先</td></tr><tr><td class='pd'>10-29 <i>周四</i></td><td><span class='wtag easy'>轻松</span></td><td class='pt'>恢复跑 30–40 分钟，心率 <145，配速 5'45"–6'05"</td></tr><tr><td class='pd'>10-30 <i>周五</i></td><td><span class='wtag easy'>轻松</span></td><td class='pt'>恢复跑 30–40 分钟，心率 <145，配速 5'45"–6'05"</td></tr><tr><td class='pd'>10-31 <i>周六</i></td><td><span class='wtag rest'>休息</span></td><td class='pt'>全休 / 散步拉伸</td></tr><tr><td class='pd'>11-01 <i>周日</i></td><td><span class='wtag long'>长距离</span></td><td class='pt'>长距离 12–14 km（赛后恢复期，保守执行），心率 <155</td></tr></tbody></table></div></div></div>
 
 <div class="card sec" id="secPb"><h2>个人最好成绩 PB <span>点击卡片查看该场详情</span></h2>
 <div class="pbbox"><div class='pbcard none'><div class='pbn'>全马</div><div class='pbv'>暂无</div><div class='pbm'>尚未跑过该距离</div></div><div class='pbcard' data-id='476241917814800488' title='点击查看这场详情'><div class='pbn'>半马<i>13 次</i></div><div class='pbv'>1:41:23</div><div class='pbp'>配速 4'48"/km</div><div class='pbm'>2026-03-22　·　均心率 177 bpm</div><div class='pbr'>2026吉利帝豪·西湖半程马拉松</div></div><div class='pbcard' data-id='481275203949723648' title='点击查看这场详情'><div class='pbn'>10K<i>186 次</i></div><div class='pbv'>46:02</div><div class='pbp'>配速 4'36"/km</div><div class='pbm'>2026-10-25　·　均心率 177 bpm</div><div class='pbr'>2026桐庐半程马拉松</div></div><div class='pbcard' data-id='481275203949723648' title='点击查看这场详情'><div class='pbn'>5K<i>398 次</i></div><div class='pbv'>22:47</div><div class='pbp'>配速 4'33"/km</div><div class='pbm'>2026-10-25　·　均心率 178 bpm</div><div class='pbr'>2026桐庐半程马拉松</div></div><div class='pbcard' data-id='481147758040875411' title='点击查看这场详情'><div class='pbn'>3K<i>408 次</i></div><div class='pbv'>13:34</div><div class='pbp'>配速 4'31"/km</div><div class='pbm'>2026-10-19　·　均心率 167 bpm</div></div></div><div id="detPb"></div></div>
@@ -455,7 +454,7 @@ input:focus{border-color:#22d3ee;box-shadow:0 0 0 2px rgba(34,211,238,.15)}
 <tbody id="tbody"></tbody></table></div>
 <div class="pager" id="pager"></div></div>
 
-<div class="sub">生成时间 2026-10-26 11:13 · 原始数据 temp/all_activities.csv · 重新生成：python scripts/gen_career_dashboard.py</div>
+<div class="sub">生成时间 2026-10-26 11:27 · 原始数据 temp/all_activities.csv · 重新生成：python scripts/gen_career_dashboard.py</div>
 
 <div class="mmask" id="mapMask" aria-hidden="true">
 <div class="mbox" role="dialog" aria-modal="true" aria-label="跑步足迹地图">
@@ -469,7 +468,7 @@ const DATA=[{"d":"2026-10-25","t":100,"n":"杭州市","dist":21.26,"sec":6214,"p
 const TN={100:"路跑",101:"跑步机",103:"场地跑",104:"室内/其他"};
 const MONTHS=["2023-10", "2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"];
 const RACES={"467637960959885319":{"n":"2025上海静安半程马拉松","p":"上海·静安大宁公园","i":"半程 21.0975km · 花朝节主题赛道 · 5000 人","tier":"bronze"},"467963656919875610":{"n":"2025杭州梦想小镇半程马拉松（梦马）","p":"杭州·余杭未来科技城","i":"半程 · 浙江金标赛事 · 半马 7000 人","tier":"bronze"},"468449487245836299":{"n":"2025安吉灵峰半程马拉松","p":"湖州·安吉灵峰度假区","i":"半程 · 浙江省马拉松积分赛 · 约 5000 人","tier":"silver"},"472671037180379539":{"n":"2025泰州马拉松","p":"江苏·泰州体育公园","i":"半程项目 · 中国田协 B 类认证 · 半马 1 万人","tier":"silver"},"473158845607215110":{"n":"2025湖州马拉松","p":"湖州·市奥体中心","i":"半程项目 · 中国田协 A1 类 · 主场作战","tier":"silver"},"473483024101572720":{"n":"2025衢州马拉松","p":"衢州·市文化艺术中心","i":"半程项目 · 中国田协 A1 类 · 半马 1 万人","tier":"silver"},"473807762013323667":{"n":"2025南宁马拉松","p":"南宁·民族广场","i":"半程项目 · 中国田协 A 类 · 总规模 3.6 万人","tier":"bronze"},"474365950460723202":{"n":"浙江大学第八届校园半程马拉松","p":"杭州·浙大紫金港校区","i":"中国青年跑浙大站 · 校园迎新跑 · 半马 2000 人","tier":"bronze"},"476241917814800488":{"n":"2026吉利帝豪·西湖半程马拉松","p":"杭州·黄龙体育中心","i":"半程 · 万人精英赛 · 个人半马 PB 场次","tier":"gold","pb":1},"476405467222933719":{"n":"2026京东宿迁马拉松","p":"江苏·宿迁项王故里","i":"大运河系列赛 · 半程项目 · 总规模 1.2 万人","tier":"bronze"},"476729516056674310":{"n":"2026北京国际长跑节·北京半程马拉松","p":"北京·天安门广场→奥林匹克公园","i":"半程 · 赛事 10 周年 · 2.2 万人","tier":"silver"},"476891912796668016":{"n":"2026中国田径协会10公里精英赛·无锡马山站","p":"江苏·无锡 马山","i":"10km · 中国田协认证精英赛 · 个人 10K 最佳场次","tier":"gold"},"480625201988534373":{"n":"2026中国田径协会10公里精英赛·苏州漕湖站","p":"江苏·苏州 漕湖","i":"10km · 中国田协认证精英赛","tier":"silver"},"477542206280859855":{"n":"上海城市K马","p":"上海","i":"城市K马系列赛 · 非正式赛事 · 半马距离路跑活动","un":1,"tier":"bronze"},"481275203949723648":{"n":"2026桐庐半程马拉松","p":"杭州·桐庐县中心广场","i":"半程 · 富春江畔最美赛道 · 12000 人 · 07:00 鸣枪","tier":"silver","pb":1}};
-const LOCN={"co":[["中华人民共和国",393],["新加坡",2]],"pv":[["浙江",372],["江苏",5],["云南",3],["北京市",3],["辽宁",3],["上海市",2],["新加坡",2],["福建",2],["陕西",1],["江西",1],["广西",1]],"ct":[["湖州",353],["杭州",12],["西双版纳",3],["北京",3],["大连",3],["上海",2],["福州",2],["西安",1],["泰州",1],["台州",1],["温州",1],["丽水",1],["苏州",1],["宿迁",1],["衢州",1],["嘉兴",1],["上饶",1],["金华",1],["徐州",1],["无锡",1],["宁波",1],["南宁",1]]};
+const LOCN={"co":[["中华人民共和国",393],["新加坡",2]],"pv":[["浙江",372],["江苏",5],["北京市",3],["云南",3],["辽宁",3],["新加坡",2],["福建",2],["上海市",2],["广西",1],["陕西",1],["江西",1]],"ct":[["湖州",353],["杭州",12],["北京",3],["西双版纳",3],["大连",3],["福州",2],["上海",2],["南宁",1],["徐州",1],["宿迁",1],["衢州",1],["无锡",1],["温州",1],["西安",1],["苏州",1],["金华",1],["丽水",1],["台州",1],["上饶",1],["泰州",1],["嘉兴",1],["宁波",1]]};
 const years=Object.keys(DATA.reduce((a,r)=>{a[r.d.slice(0,4)]=1;return a;},{})).sort();
 function pace(s){if(!s)return"--";var t=Math.round(s);return Math.floor(t/60)+"'"+String(t%60).padStart(2,"0")+'"';}
 function dur(x){x=Math.round(x);var h=Math.floor(x/3600),m=Math.floor(x%3600/60),s=x%60;
@@ -723,9 +722,9 @@ if(rc){
   +"<em>"+rc.p+"　·　"+rc.i+"</em>"
   +"<em>完赛成绩 "+dur(r.sec)+"　均配速 "+pace(r.pace)+"/km　均心率 "+(r.hr||"-")+" bpm　训练负荷 "+(r.tl||"-")+"</em></div>";}
 h+="<div class='drow'><div class='dl'>";
-if(r.rep||r.repk){h+="<div class='repbox'><div class='rephd'><b>训练报告 · 简要版</b>"
+if(r.rep||r.repk){h+="<div class='repbox'><div class='rephd'><b>训练报告</b>"
  +(r.repc?"<span class='repkind'>"+r.repc+"</span>":"")+"</div>"
- +(r.repk?"<div class='repk'><div class='repk-t'>关键观点</div><ul>"+r.repk+"</ul></div>":"")
+ +(r.repk?"<div class='repk'><ul>"+r.repk+"</ul></div>":"")
  +(r.rep?"<div class='reptxt'>"+r.rep+"</div>":"")+"</div>";}
 h+="<div class='cmt'><b>"+(r.rep?"数据点评":"训练点评")+"</b>　"+r.cm+"</div>";
 h+="<div class='metrics'>"
