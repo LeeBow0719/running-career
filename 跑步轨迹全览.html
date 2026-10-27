@@ -731,21 +731,21 @@ var Base=L.TileLayer.extend({
  }
 });
 new Base('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}',
- {subdomains:'1234',maxZoom:18,opacity:.72}).addTo(map);
+ {subdomains:'1234',maxZoom:18,opacity:.82}).addTo(map);
 // 底图降饱和压暗，轨迹更突出
-var tilePane=map.getPane('tilePane');if(tilePane)tilePane.style.filter='saturate(.62) brightness(.86)';
+var tilePane=map.getPane('tilePane');if(tilePane)tilePane.style.filter='saturate(.72) brightness(.96)';
 const layers={},groups={};
 TR.forEach(function(t){
  var y=t.d.slice(0,4);
  if(!layers[y]){layers[y]=L.layerGroup().addTo(map);layers[y].__on=true;}
  var col=COL[y]||'#ff7a1a';
  // 双线：深色描边打底 + 高亮主线，浅色底图上也跳得出来
- var casing=L.polyline(t.pts,{color:'#3d1e00',weight:3.4,opacity:.5,lineCap:'round',lineJoin:'round',interactive:false});
- const line=L.polyline(t.pts,{color:col,weight:1.7,opacity:.95,lineCap:'round',lineJoin:'round',interactive:true});
+ var casing=L.polyline(t.pts,{color:'#3d1e00',weight:2.8,opacity:.45,lineCap:'round',lineJoin:'round',interactive:false});
+ const line=L.polyline(t.pts,{color:col,weight:1.4,opacity:.95,lineCap:'round',lineJoin:'round',interactive:true});
  line.bindPopup("<b>"+t.d+" · "+t.name+"</b><br>"+t.km.toFixed(2)+" km · "+t.dur+" · 配速 "+t.pace+
    "<br>心率 "+(t.hr||'-')+" bpm");
- line.on('mouseover',function(){casing.setStyle({weight:5.4,opacity:.75});line.setStyle({weight:3.2,opacity:1});casing.bringToFront();line.bringToFront();});
- line.on('mouseout',function(){casing.setStyle({weight:5,opacity:.5});line.setStyle({weight:1.7,opacity:.95});});
+ line.on('mouseover',function(){casing.setStyle({weight:4.4,opacity:.7});line.setStyle({weight:2.8,opacity:1});casing.bringToFront();line.bringToFront();});
+ line.on('mouseout',function(){casing.setStyle({weight:5,opacity:.5});line.setStyle({weight:1.4,opacity:.95});});
  casing.addTo(layers[y]);line.addTo(layers[y]);
 });
 // 默认视野：主场（轨迹最密集的 0.1° 网格）；「全览」回到全部
