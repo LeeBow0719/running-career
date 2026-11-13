@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>桐庐半马赛后复盘 · 2026-10-25</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0e17;color:#dfe3ea;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+ line-height:1.65;padding:22px 16px 60px}
+.wrap{max-width:960px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#12213a,#0d1524 60%);border:1px solid #1e2b45;border-radius:16px;
+ padding:24px 26px;margin-bottom:18px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;
+ background:radial-gradient(circle,rgba(248,113,113,.14),transparent 70%)}
+.hero h1{font-size:23px;font-weight:800;letter-spacing:.5px}
+.hero .sub{color:#8fa3bd;font-size:13px;margin-top:4px}
+.big{display:flex;align-items:baseline;gap:12px;margin-top:16px;flex-wrap:wrap}
+.big .n{font-size:52px;font-weight:900;color:#f87171;line-height:1}
+.big .u{font-size:14px;color:#8fa3bd}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.cmp div{background:#121c2e;border:1px solid #1c2942;border-radius:10px;padding:11px 12px}
+.cmp .k{font-size:10.5px;color:#6b7a94}
+.cmp .v{font-size:17px;font-weight:800;margin-top:3px}
+.cmp .v.g{color:#34d399}.cmp .v.y{color:#f5c542}.cmp .v.r{color:#f87171}
+.cmp .d{font-size:10.5px;color:#7c8aa5;margin-top:1px}
+@media(max-width:680px){.cmp{grid-template-columns:1fr}}
+.card{background:#0f1626;border:1px solid #1e2b45;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.card h2{font-size:15.5px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card h2::before{content:"";width:3px;height:15px;background:#34d399;border-radius:2px}
+.card h2 em{font-style:normal;font-size:11.5px;color:#6b7a94;font-weight:400}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;font-size:11px;color:#6b7a94;font-weight:600;padding:7px 6px;border-bottom:1px solid #1e2b45}
+td{padding:7px 6px;border-bottom:1px solid rgba(22,32,50,.6)}
+tbody tr:nth-child(odd){background:#111a2b}
+tr.bad{background:rgba(248,113,113,.13)!important}
+tr.bad .pace{color:#f87171}
+tr.hi .hr{color:#fbbf24}
+tr.fast .pace{color:#60a5fa}
+.seg{font-weight:700;color:#dfe3ea;white-space:nowrap}
+.pace{font-family:Consolas,monospace;font-size:13px;font-weight:800;color:#34d399}
+.time{font-family:Consolas,monospace;color:#cbd5e1}
+.hr{font-size:12px;color:#f5c542;font-family:Consolas,monospace}
+.tip{font-size:11px;color:#8fa3bd}
+.legend{display:flex;gap:16px;font-size:11.5px;color:#8fa3bd;margin-bottom:8px;flex-wrap:wrap}
+.legend i{display:inline-block;width:16px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.note{background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.28);border-radius:9px;
+ padding:10px 13px;font-size:11.5px;color:#93b4dc;margin-top:12px}
+.warn{background:rgba(248,113,113,.09);border:1px solid rgba(248,113,113,.35);border-radius:9px;
+ padding:11px 14px;font-size:12px;color:#f0a0a0;margin-top:12px}
+.warn b{color:#fca5a5}
+.ok{background:rgba(52,211,153,.09);border:1px solid rgba(52,211,153,.33);border-radius:9px;
+ padding:11px 14px;font-size:12px;color:#86d9b6;margin-top:12px}
+.ok b{color:#a7f3d0}
+.zb{position:relative;height:26px;background:#121c2e;border-radius:6px;margin-bottom:6px;overflow:hidden}
+.zb i{position:absolute;left:0;top:0;height:100%;border-radius:6px}
+.zb span{position:absolute;left:10px;top:4px;font-size:11.5px;color:#dfe3ea;font-weight:600}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.g4{background:#121c2e;border:1px solid #1c2942;border-radius:10px;padding:11px 12px}
+.g4 .k{font-size:10.5px;color:#6b7a94}
+.g4 .v{font-size:15px;font-weight:700;margin-top:3px}
+.g4 .v.r{color:#f87171}.g4 .v.y{color:#f5c542}.g4 .v.g{color:#34d399}
+@media(max-width:680px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.tl{position:relative;padding-left:22px}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:#1e2b45}
+.ti{position:relative;padding-bottom:12px}
+.ti:last-child{padding-bottom:0}
+.ti::before{content:"";position:absolute;left:-20px;top:6px;width:10px;height:10px;border-radius:50%;
+ background:#1e2b45;border:2px solid #0f1626}
+.ti.r::before{background:#f87171;box-shadow:0 0 0 3px rgba(248,113,113,.18)}
+.ti.g::before{background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.18)}
+.ti .d{font-size:12.5px;font-weight:700;color:#dfe3ea}
+.ti .c{font-size:12px;color:#a8b8cf;margin-top:2px}
+.ti .c b{color:#34d399}
+.foot{text-align:center;color:#9ca4b1;font-size:11px;margin-top:26px;line-height:1.8}
+</style>
+<style>html{color-scheme:dark}</style></head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <h1>桐庐半程马拉松 · 赛后复盘</h1>
+  <div class="sub">2026-10-25 07:11 起跑 · 21.26 km · 爬升 27 m · COROS PACE 4 + 心率带</div>
+  <div class="big"><span class="n">1:43:33</span><span class="u">完赛成绩　·　平均心率 173　·　训练负荷 536</span></div>
+  <div class="cmp">
+    <div><div class="k">目标成绩</div><div class="v g">1:40:00</div><div class="d">差 3'33"</div></div>
+    <div><div class="k">现有 PB</div><div class="v y">1:42:33</div><div class="d">差 1'00"</div></div>
+    <div><div class="k">若不崩（前15km配速跑完）</div><div class="v r">1:38:47</div><div class="d">崩掉 4'46"</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>一句话结论 <em>先看这个</em></h2>
+  <div class="ok">
+    <b>你的能力到了，崩的不是能力。</b>前 15 km 实跑 4'39"/km、用时 69'43"，比 1:40 目标节奏<b>只快 33 秒</b>——
+    这是教科书级的配速控制。真正的差距全在 KM16–18 这 3 公里上：你在这里掉了 <b>4 分 37 秒</b>，
+    正好是 1:43:33 与 1:38:47 之间的全部距离。
+  </div>
+  <div class="warn">
+    <b>直接原因：97% 湿度。</b>Coros 记录的赛时环境是 18℃、体感 17℃、<b>湿度 97%</b>、风速 9.2 km/h。
+    这个湿度下汗液几乎不蒸发，散热系统形同虚设——你的心率有 <b>60% 的时间压在 175 bpm 以上</b>，
+    从 KM5 就顶到了 177。身体一直在超阈值运转，糖原和电解质提前烧穿，到 16 km 肌肉直接罢工。
+  </div>
+  <div class="note">
+    <b>我要先认这个错：</b>早上 8 点的赛日实战卡里，我判断"阴天 + 18~23℃ + 雨势下调，散热条件优于预期"，
+    <b>只看温度和降水，没看湿度</b>。97% 的湿度是今天最大的隐形杀手，我把方向判反了。
+    这条会写进长期记忆：赛前天气评估必须把湿度作为一票否决项，而不是参考项。
+  </div>
+</div>
+
+<div class="card">
+  <h2>每公里明细 <em>红色为崩溃段</em></h2>
+  <table>
+    <thead><tr><th>公里</th><th>配速</th><th>累计</th><th>心率</th><th>步频</th><th>步幅</th><th>触地ms</th><th>标记</th></tr></thead>
+    <tbody><tr class=""><td class="seg">1 km</td><td class="pace">4'53"</td><td class="time">4:53</td><td class="hr">152</td><td>195</td><td>105</td><td>217</td><td class="tip"></td></tr><tr class=""><td class="seg">2 km</td><td class="pace">4'41"</td><td class="time">9:34</td><td class="hr">169</td><td>200</td><td>107</td><td>210</td><td class="tip"></td></tr><tr class=""><td class="seg">3 km</td><td class="pace">4'38"</td><td class="time">14:12</td><td class="hr">171</td><td>203</td><td>106</td><td>208</td><td class="tip"></td></tr><tr class=""><td class="seg">4 km</td><td class="pace">4'39"</td><td class="time">18:52</td><td class="hr">173</td><td>200</td><td>107</td><td>209</td><td class="tip"></td></tr><tr class=""><td class="seg">5 km</td><td class="pace">4'35"</td><td class="time">23:26</td><td class="hr">177</td><td>199</td><td>110</td><td>205</td><td class="tip"></td></tr><tr class="hi"><td class="seg">6 km</td><td class="pace">4'34"</td><td class="time">28:00</td><td class="hr">178</td><td>198</td><td>111</td><td>206</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">7 km</td><td class="pace">4'29"</td><td class="time">32:29</td><td class="hr">179</td><td>198</td><td>113</td><td>203</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">8 km</td><td class="pace">4'34"</td><td class="time">37:03</td><td class="hr">179</td><td>196</td><td>112</td><td>208</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">9 km</td><td class="pace">4'37"</td><td class="time">41:41</td><td class="hr">178</td><td>194</td><td>111</td><td>213</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">10 km</td><td class="pace">4'41"</td><td class="time">46:22</td><td class="hr">178</td><td>195</td><td>109</td><td>212</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">11 km</td><td class="pace">4'37"</td><td class="time">50:59</td><td class="hr">178</td><td>195</td><td>111</td><td>211</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">12 km</td><td class="pace">4'37"</td><td class="time">55:36</td><td class="hr">179</td><td>195</td><td>111</td><td>207</td><td class="tip">心率偏高</td></tr><tr class="hi"><td class="seg">13 km</td><td class="pace">4'43"</td><td class="time">1:00:19</td><td class="hr">178</td><td>194</td><td>109</td><td>214</td><td class="tip">心率偏高</td></tr><tr class=""><td class="seg">14 km</td><td class="pace">4'41"</td><td class="time">1:05:00</td><td class="hr">177</td><td>193</td><td>111</td><td>216</td><td class="tip"></td></tr><tr class="hi"><td class="seg">15 km</td><td class="pace">4'43"</td><td class="time">1:09:43</td><td class="hr">178</td><td>190</td><td>112</td><td>216</td><td class="tip">心率偏高</td></tr><tr class="bad"><td class="seg">16 km</td><td class="pace">5'32"</td><td class="time">1:15:15</td><td class="hr">172</td><td>178</td><td>101</td><td>267</td><td class="tip">崩</td></tr><tr class="bad"><td class="seg">17 km</td><td class="pace">6'57"</td><td class="time">1:22:12</td><td class="hr">155</td><td>161</td><td>89</td><td>343</td><td class="tip">崩</td></tr><tr class="bad"><td class="seg">18 km</td><td class="pace">5'34"</td><td class="time">1:27:46</td><td class="hr">165</td><td>185</td><td>97</td><td>248</td><td class="tip">崩</td></tr><tr class=""><td class="seg">19 km</td><td class="pace">4'54"</td><td class="time">1:32:40</td><td class="hr">172</td><td>193</td><td>106</td><td>211</td><td class="tip"></td></tr><tr class=""><td class="seg">20 km</td><td class="pace">4'46"</td><td class="time">1:37:26</td><td class="hr">177</td><td>194</td><td>108</td><td>208</td><td class="tip"></td></tr><tr class="hi"><td class="seg">21 km</td><td class="pace">4'45"</td><td class="time">1:42:11</td><td class="hr">180</td><td>192</td><td>109</td><td>213</td><td class="tip">心率偏高</td></tr><tr><td class="seg">+256 m</td><td class="pace">5'21"</td><td class="time">1:43:33</td><td class="hr">180</td><td>190</td><td>98</td><td>218</td><td class="tip"></td></tr></tbody>
+  </table>
+  <div class="note">
+    <b>崩塌的 signature 很清楚：</b>步频 190→178→161，步幅 112→101→89，触地时间 216→267→<b>343 ms</b>（暴增 60%），
+    而心率<b>不升反降</b>（178→172→155）。心率下降 + 步频崩塌 = 不是心肺撑不住，是<b>肌肉/代谢的急性罢工</b>。
+    而且 KM19 你又能跑回 4'54"、KM20 4'46"、KM21 4'45"——真正撞墙的人恢复不了这个速度。
+    所以判断是<b>抽筋或严重肌肉痉挛</b>，被迫停下 5–8 分钟，缓过来后还剩油。
+  </div>
+</div>
+
+<div class="card">
+  <h2>配速与心率曲线 <em>配速线越高越快</em></h2>
+  <div class="legend">
+    <span><i style="background:#34d399"></i>配速（越高越快）</span>
+    <span><i style="background:#232733"></i>心率 bpm</span>
+    <span><i style="background:rgba(248,113,113,.35)"></i>崩溃段 KM16–18</span>
+  </div>
+  <svg viewBox="0 0 880 300" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><rect x="638.5" y="24.0" width="78.2" height="236.0" fill="rgba(248,113,113,.10)"/><text x="677.6" y="16.0" fill="#f87171" font-size="10.5" text-anchor="middle">崩溃段</text><line x1="52.0" y1="24.0" x2="834.0" y2="24.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="27.5" fill="#34d399" font-size="10" text-anchor="end">4'20"</text><text x="841.0" y="27.5" fill="#f5c542" font-size="10" text-anchor="start">190</text><line x1="52.0" y1="83.0" x2="834.0" y2="83.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="86.5" fill="#34d399" font-size="10" text-anchor="end">5'02"</text><text x="841.0" y="86.5" fill="#f5c542" font-size="10" text-anchor="start">179</text><line x1="52.0" y1="142.0" x2="834.0" y2="142.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="145.5" fill="#34d399" font-size="10" text-anchor="end">5'45"</text><text x="841.0" y="145.5" fill="#f5c542" font-size="10" text-anchor="start">168</text><line x1="52.0" y1="201.0" x2="834.0" y2="201.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="204.5" fill="#34d399" font-size="10" text-anchor="end">6'28"</text><text x="841.0" y="204.5" fill="#f5c542" font-size="10" text-anchor="start">156</text><line x1="52.0" y1="260.0" x2="834.0" y2="260.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="263.5" fill="#34d399" font-size="10" text-anchor="end">7'10"</text><text x="841.0" y="263.5" fill="#f5c542" font-size="10" text-anchor="start">145</text><text x="52.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">1</text><text x="130.2" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">3</text><text x="208.4" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">5</text><text x="286.6" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">7</text><text x="364.8" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">9</text><text x="443.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">11</text><text x="521.2" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">13</text><text x="599.4" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">15</text><text x="677.6" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">17</text><text x="755.8" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">19</text><text x="834.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">21</text><text x="856.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">km</text><polyline fill="none" stroke="#34d399" stroke-width="2" stroke-linejoin="round" points="52.0,69.5 91.1,53.3 130.2,49.6 169.3,50.8 208.4,44.2 247.5,42.9 286.6,36.6 325.7,43.9 364.8,48.2 403.9,53.3 443.0,47.9 482.1,48.0 521.2,55.6 560.3,53.3 599.4,55.3 638.5,124.5 677.6,242.0 716.7,126.2 755.8,71.1 794.9,60.1 834.0,59.4"/><circle cx="52.0" cy="69.5" r="2.6" fill="#34d399"/><circle cx="91.1" cy="53.3" r="2.6" fill="#34d399"/><circle cx="130.2" cy="49.6" r="2.6" fill="#34d399"/><circle cx="169.3" cy="50.8" r="2.6" fill="#34d399"/><circle cx="208.4" cy="44.2" r="2.6" fill="#34d399"/><circle cx="247.5" cy="42.9" r="2.6" fill="#34d399"/><circle cx="286.6" cy="36.6" r="2.6" fill="#34d399"/><circle cx="325.7" cy="43.9" r="2.6" fill="#34d399"/><circle cx="364.8" cy="48.2" r="2.6" fill="#34d399"/><circle cx="403.9" cy="53.3" r="2.6" fill="#34d399"/><circle cx="443.0" cy="47.9" r="2.6" fill="#34d399"/><circle cx="482.1" cy="48.0" r="2.6" fill="#34d399"/><circle cx="521.2" cy="55.6" r="2.6" fill="#34d399"/><circle cx="560.3" cy="53.3" r="2.6" fill="#34d399"/><circle cx="599.4" cy="55.3" r="2.6" fill="#34d399"/><circle cx="638.5" cy="124.5" r="2.6" fill="#34d399"/><circle cx="677.6" cy="242.0" r="2.6" fill="#34d399"/><circle cx="716.7" cy="126.2" r="2.6" fill="#34d399"/><circle cx="755.8" cy="71.1" r="2.6" fill="#34d399"/><circle cx="794.9" cy="60.1" r="2.6" fill="#34d399"/><circle cx="834.0" cy="59.4" r="2.6" fill="#34d399"/><polyline fill="none" stroke="#f5c542" stroke-width="2" stroke-linejoin="round" points="52.0,223.3 91.1,134.1 130.2,123.6 169.3,113.2 208.4,92.2 247.5,86.9 286.6,81.7 325.7,81.7 364.8,86.9 403.9,86.9 443.0,86.9 482.1,81.7 521.2,86.9 560.3,92.2 599.4,86.9 638.5,118.4 677.6,207.6 716.7,155.1 755.8,118.4 794.9,92.2 834.0,76.4"/><circle cx="52.0" cy="223.3" r="2.6" fill="#f5c542"/><circle cx="91.1" cy="134.1" r="2.6" fill="#f5c542"/><circle cx="130.2" cy="123.6" r="2.6" fill="#f5c542"/><circle cx="169.3" cy="113.2" r="2.6" fill="#f5c542"/><circle cx="208.4" cy="92.2" r="2.6" fill="#f5c542"/><circle cx="247.5" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="286.6" cy="81.7" r="2.6" fill="#f5c542"/><circle cx="325.7" cy="81.7" r="2.6" fill="#f5c542"/><circle cx="364.8" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="403.9" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="443.0" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="482.1" cy="81.7" r="2.6" fill="#f5c542"/><circle cx="521.2" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="560.3" cy="92.2" r="2.6" fill="#f5c542"/><circle cx="599.4" cy="86.9" r="2.6" fill="#f5c542"/><circle cx="638.5" cy="118.4" r="2.6" fill="#f5c542"/><circle cx="677.6" cy="207.6" r="2.6" fill="#f5c542"/><circle cx="716.7" cy="155.1" r="2.6" fill="#f5c542"/><circle cx="755.8" cy="118.4" r="2.6" fill="#f5c542"/><circle cx="794.9" cy="92.2" r="2.6" fill="#f5c542"/><circle cx="834.0" cy="76.4" r="2.6" fill="#f5c542"/></svg>
+  <div class="note">
+    心率从 KM5 起就压在 177–179，一路没有下来过。正常半马前中段应该稳定在 165–172（阈值下沿），
+    给后段留 5–8 bpm 的余量。你今天<b>起手就把余量用完了</b>。
+  </div>
+</div>
+
+<div class="card">
+  <h2>步频与步幅 <em>技术动作在哪里散架</em></h2>
+  <div class="legend">
+    <span><i style="background:#60a5fa"></i>步频 spm</span>
+    <span><i style="background:#c084fc"></i>步幅 cm</span>
+  </div>
+  <svg viewBox="0 0 880 300" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><rect x="638.5" y="24.0" width="78.2" height="236.0" fill="rgba(248,113,113,.10)"/><text x="677.6" y="16.0" fill="#f87171" font-size="10.5" text-anchor="middle">崩溃段</text><line x1="52.0" y1="24.0" x2="834.0" y2="24.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="27.5" fill="#60a5fa" font-size="10" text-anchor="end">210</text><text x="841.0" y="27.5" fill="#c084fc" font-size="10" text-anchor="start">120</text><line x1="52.0" y1="83.0" x2="834.0" y2="83.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="86.5" fill="#60a5fa" font-size="10" text-anchor="end">195</text><text x="841.0" y="86.5" fill="#c084fc" font-size="10" text-anchor="start">110</text><line x1="52.0" y1="142.0" x2="834.0" y2="142.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="145.5" fill="#60a5fa" font-size="10" text-anchor="end">180</text><text x="841.0" y="145.5" fill="#c084fc" font-size="10" text-anchor="start">100</text><line x1="52.0" y1="201.0" x2="834.0" y2="201.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="204.5" fill="#60a5fa" font-size="10" text-anchor="end">165</text><text x="841.0" y="204.5" fill="#c084fc" font-size="10" text-anchor="start">90</text><line x1="52.0" y1="260.0" x2="834.0" y2="260.0" stroke="#dfe3ea" stroke-width="1"/><text x="45.0" y="263.5" fill="#60a5fa" font-size="10" text-anchor="end">150</text><text x="841.0" y="263.5" fill="#c084fc" font-size="10" text-anchor="start">80</text><text x="52.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">1</text><text x="130.2" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">3</text><text x="208.4" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">5</text><text x="286.6" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">7</text><text x="364.8" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">9</text><text x="443.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">11</text><text x="521.2" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">13</text><text x="599.4" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">15</text><text x="677.6" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">17</text><text x="755.8" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">19</text><text x="834.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">21</text><text x="856.0" y="276.0" fill="#6b7a94" font-size="10" text-anchor="middle">km</text><polyline fill="none" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round" points="52.0,83.0 91.1,63.3 130.2,51.5 169.3,63.3 208.4,67.3 247.5,71.2 286.6,71.2 325.7,79.1 364.8,86.9 403.9,83.0 443.0,83.0 482.1,83.0 521.2,86.9 560.3,90.9 599.4,102.7 638.5,149.9 677.6,216.7 716.7,122.3 755.8,90.9 794.9,86.9 834.0,94.8"/><circle cx="52.0" cy="83.0" r="2.6" fill="#60a5fa"/><circle cx="91.1" cy="63.3" r="2.6" fill="#60a5fa"/><circle cx="130.2" cy="51.5" r="2.6" fill="#60a5fa"/><circle cx="169.3" cy="63.3" r="2.6" fill="#60a5fa"/><circle cx="208.4" cy="67.3" r="2.6" fill="#60a5fa"/><circle cx="247.5" cy="71.2" r="2.6" fill="#60a5fa"/><circle cx="286.6" cy="71.2" r="2.6" fill="#60a5fa"/><circle cx="325.7" cy="79.1" r="2.6" fill="#60a5fa"/><circle cx="364.8" cy="86.9" r="2.6" fill="#60a5fa"/><circle cx="403.9" cy="83.0" r="2.6" fill="#60a5fa"/><circle cx="443.0" cy="83.0" r="2.6" fill="#60a5fa"/><circle cx="482.1" cy="83.0" r="2.6" fill="#60a5fa"/><circle cx="521.2" cy="86.9" r="2.6" fill="#60a5fa"/><circle cx="560.3" cy="90.9" r="2.6" fill="#60a5fa"/><circle cx="599.4" cy="102.7" r="2.6" fill="#60a5fa"/><circle cx="638.5" cy="149.9" r="2.6" fill="#60a5fa"/><circle cx="677.6" cy="216.7" r="2.6" fill="#60a5fa"/><circle cx="716.7" cy="122.3" r="2.6" fill="#60a5fa"/><circle cx="755.8" cy="90.9" r="2.6" fill="#60a5fa"/><circle cx="794.9" cy="86.9" r="2.6" fill="#60a5fa"/><circle cx="834.0" cy="94.8" r="2.6" fill="#60a5fa"/><polyline fill="none" stroke="#c084fc" stroke-width="2" stroke-linejoin="round" points="52.0,112.5 91.1,100.7 130.2,106.6 169.3,100.7 208.4,83.0 247.5,77.1 286.6,65.3 325.7,71.2 364.8,77.1 403.9,88.9 443.0,77.1 482.1,77.1 521.2,88.9 560.3,77.1 599.4,71.2 638.5,136.1 677.6,206.9 716.7,159.7 755.8,106.6 794.9,94.8 834.0,88.9"/><circle cx="52.0" cy="112.5" r="2.6" fill="#c084fc"/><circle cx="91.1" cy="100.7" r="2.6" fill="#c084fc"/><circle cx="130.2" cy="106.6" r="2.6" fill="#c084fc"/><circle cx="169.3" cy="100.7" r="2.6" fill="#c084fc"/><circle cx="208.4" cy="83.0" r="2.6" fill="#c084fc"/><circle cx="247.5" cy="77.1" r="2.6" fill="#c084fc"/><circle cx="286.6" cy="65.3" r="2.6" fill="#c084fc"/><circle cx="325.7" cy="71.2" r="2.6" fill="#c084fc"/><circle cx="364.8" cy="77.1" r="2.6" fill="#c084fc"/><circle cx="403.9" cy="88.9" r="2.6" fill="#c084fc"/><circle cx="443.0" cy="77.1" r="2.6" fill="#c084fc"/><circle cx="482.1" cy="77.1" r="2.6" fill="#c084fc"/><circle cx="521.2" cy="88.9" r="2.6" fill="#c084fc"/><circle cx="560.3" cy="77.1" r="2.6" fill="#c084fc"/><circle cx="599.4" cy="71.2" r="2.6" fill="#c084fc"/><circle cx="638.5" cy="136.1" r="2.6" fill="#c084fc"/><circle cx="677.6" cy="206.9" r="2.6" fill="#c084fc"/><circle cx="716.7" cy="159.7" r="2.6" fill="#c084fc"/><circle cx="755.8" cy="106.6" r="2.6" fill="#c084fc"/><circle cx="794.9" cy="94.8" r="2.6" fill="#c084fc"/><circle cx="834.0" cy="88.9" r="2.6" fill="#c084fc"/></svg>
+  <div class="note">
+    KM5–7 你的步幅冲到 110–113 cm（全程最高），步频却维持在 198 左右——
+    <b>这是靠拉大步幅提速，不是靠步频</b>。大步幅 + 高触地冲击在湿滑路面上代价极高，
+    也是 16 km 肌肉罢工的直接伏笔。全程最快那公里（KM7，4'29"）就是步幅 113 cm 跑出来的。
+  </div>
+</div>
+
+<div class="card">
+  <h2>心率区间分布 <em>这场的真实强度</em></h2>
+  <div class="zb"><i style="width:3%;background:#60a5fa"></i><span>3% · 132–149</span></div><div class="zb"><i style="width:4%;background:#38bdf8"></i><span>4% · 150–157</span></div><div class="zb"><i style="width:14%;background:#34d399"></i><span>14% · 158–168</span></div><div class="zb"><i style="width:19%;background:#232733"></i><span>19% · 169–175</span></div><div class="zb"><i style="width:60%;background:#f87171"></i><span>60% · 175+</span></div>
+  <div class="grid4" style="margin-top:14px">
+    <div class="g4"><div class="k">平均心率</div><div class="v y">173 bpm</div></div>
+    <div class="g4"><div class="k">最高心率</div><div class="v r">183 bpm</div></div>
+    <div class="g4"><div class="k">175+ 占比</div><div class="v r">60%</div></div>
+    <div class="g4"><div class="k">有氧 / 无氧效应</div><div class="v">5.0 / 3.7</div></div>
+  </div>
+  <div class="warn">
+    <b>60% 时间在 175 bpm 以上，这是本场最刺眼的数字。</b>半马的理想分布是大部分落在 165–172，
+    175+ 不应该超过 15–20%。你今天等于把一场半马跑成了三次阈值课叠加——
+    有氧效应 5.0 是满值（上限），无氧 3.7，身体受到的打击远超一场比赛该有的量级。
+  </div>
+</div>
+
+<div class="card">
+  <h2>接下来怎么走 <em>恢复优先，别急着翻篇</em></h2>
+  <div class="tl">
+    <div class="ti r">
+      <div class="d">今天剩下时间</div>
+      <div class="c">补电解质（淡盐水 / 运动饮料 + 香蕉）+ 碳水正餐，腿部冷敷 15 min。
+        <b>今天不要再跑，也不要做力量</b>。有条件就冰浴或冷水冲腿 10 min。</div>
+    </div>
+    <div class="ti r">
+      <div class="d">10/26 – 10/28（3 天）</div>
+      <div class="c"><b>全休或散步</b>。肌肉微损伤 + 电解质紊乱需要 72 小时才回到基线。
+        晨起静息心率若比平时高 5 bpm 以上，继续休。</div>
+    </div>
+    <div class="ti g">
+      <div class="d">10/29 起（若无酸痛）</div>
+      <div class="c">轻松跑 6–8 km @ 5'45"–6'00"，<b>心率必须 &lt;145</b>。连续 2 次达标再谈强度。</div>
+    </div>
+    <div class="ti g">
+      <div class="d">11 月第一周</div>
+      <div class="c">恢复一次阈值课（20 min @ 4'50"–5'00"，HR 168–178），验证身体是否真的回来了。
+        <b>不达标就再等一周。</b></div>
+    </div>
+  </div>
+  <div class="ok">
+    <b>三条会写进下次作战卡的修正：</b><br>
+    1. <b>配速按心率定，不按秒数定。</b>目标配速 4'41" 只在你状态、温度、湿度都正常时成立；
+       下次改为"心率守住 170–174，配速随环境浮动"。<br>
+    2. <b>湿度 &gt; 80% 时，目标成绩自动放宽 3–5 分钟</b>，且前 10 km 心率上限下调到 170。<br>
+    3. <b>不靠拉步幅提速。</b>步幅上限锁 110 cm，要快就提步频（目标 200+）。今天 KM7 的 113 cm 步幅是反面教材。
+  </div>
+  <div class="note">
+    <b>最后说一句实在的：</b>前 15 km 你能跑出 4'39" 且只比目标快 33 秒，说明这 4 个月的训练没有白费，
+    1:40 的能力你已经有了。今天丢的 4 分半，是<b>环境判读 + 强度管理</b>的学费，不是能力缺口。
+    下一个比赛日，把湿度这一项算进去，剩下的交给腿就行。
+  </div>
+</div>
+
+<div class="foot">
+  数据源：Coros 活动 481275203949723648（21.256 km / 1:43:33 / 平均心率 173 / TL 536）· 赛时环境由 Coros 记录（18℃ · 体感 17℃ · 湿度 97% · 风速 9.2 km/h）<br>
+  生成：2026-10-25 赛后复盘　·　配速为每公里净配速，累计时间含起跑区延误
+</div>
+
+</div>
+</body>
+</html>
