@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-11-15 长沙马拉松半程 · 以赛代练报告</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#0f1117;color:#dfe3ea;margin:0;padding:24px 16px 40px;}
+  .card{background:#1a1d27;border-radius:12px;padding:20px 24px;margin:0 auto 16px;max-width:900px;box-shadow:0 1px 4px rgba(0,0,0,.3);}
+  h1{font-size:21px;margin:0 0 6px;line-height:1.45;}
+  h2{font-size:17px;margin:0 0 12px;border-left:4px solid #e5484d;padding-left:10px;}
+  .sub{color:#8b93a7;font-size:13px;margin-bottom:14px;line-height:1.75;}
+  .metrics{display:flex;flex-wrap:wrap;gap:10px;}
+  .metric{flex:1;min-width:104px;background:#232733;border-radius:8px;padding:10px 8px;text-align:center;}
+  .metric .v{font-size:19px;font-weight:700;color:#e5484d;}
+  .metric .k{font-size:11.5px;color:#8b93a7;margin-top:3px;line-height:1.4;}
+  .metric.g .v{color:#6fbf8b;}
+  .metric.b .v{color:#5b8def;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th,td{padding:6px 5px;border-bottom:1px solid #2a2d3a;text-align:center;}
+  th{background:#232733;font-weight:600;font-size:12.5px;}
+  .fast{background:rgba(229,72,77,.15);font-weight:600;color:#ff8b8f;}
+  .slow{background:rgba(46,158,91,.13);color:#7fd3a3;}
+  .note{font-size:13.5px;line-height:1.95;}
+  .note b{color:#ff7075;}
+  .ok{background:rgba(46,158,91,.13);border-left:4px solid #2e9e5b;padding:12px 14px;border-radius:6px;font-size:13.5px;line-height:1.9;}
+  .warn{background:rgba(245,166,35,.12);border-left:4px solid #f5a623;padding:12px 14px;border-radius:6px;font-size:13.5px;line-height:1.9;margin-top:10px;}
+  .info{background:rgba(47,111,237,.12);border-left:4px solid #2f6fed;padding:12px 14px;border-radius:6px;font-size:13.5px;line-height:1.9;margin-top:10px;}
+  .bar{display:flex;height:26px;border-radius:5px;overflow:hidden;font-size:10.5px;line-height:26px;color:#fff;text-align:center;}
+  .kv{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;margin-top:10px;}
+  .kv span{color:#8b93a7;}
+  .kv b{color:#dfe3ea;}
+  @media(max-width:560px){
+    body{padding:14px 10px 30px;}
+    .card{padding:16px 14px;}
+    h1{font-size:18px;}
+    table{font-size:11.5px;}
+    th,td{padding:5px 2px;}
+    .metric{min-width:88px;}
+    .metric .v{font-size:16.5px;}
+  }
+</style>
+<style>html{color-scheme:dark}</style></head>
+<body>
+
+<div class="card">
+  <h1>🏁 比赛报告 · 长沙马拉松半程 21.48km —— <span style="color:#6fbf8b">以赛代练，执行达标</span></h1>
+  <div class="sub">2026-11-15（周日）07:12 过起点 · 长沙 湘江中路杜甫江阁 → 渔人码头 · 半马 1.7 万人 / 总规模 3.5 万 · 距合肥 PB（1:38:51）7 天 · 距黄山目标赛 14 天</div>
+  <div class="metrics">
+    <div class="metric"><div class="v">1:48:19</div><div class="k">完赛用时</div></div>
+    <div class="metric"><div class="v">21.48 km</div><div class="k">手表距离（多跑 376m）</div></div>
+    <div class="metric"><div class="v">5′03″/km</div><div class="k">平均配速</div></div>
+    <div class="metric"><div class="v">162 bpm</div><div class="k">平均心率（最高 184）</div></div>
+    <div class="metric"><div class="v">414</div><div class="k">训练负荷</div></div>
+  </div>
+  <div class="metrics" style="margin-top:10px;">
+    <div class="metric g"><div class="v">1:46:25</div><div class="k">21.1km 净等效（按 5′03″ 折算）</div></div>
+    <div class="metric"><div class="v">4.8 / 3.6</div><div class="k">有氧 / 无氧效应</div></div>
+    <div class="metric"><div class="v">191</div><div class="k">平均步频（最高 215）</div></div>
+    <div class="metric"><div class="v">104 cm</div><div class="k">平均步幅</div></div>
+    <div class="metric b"><div class="v">5.2%</div><div class="k">HR≥170 时间占比</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ok">
+    <b>核心结论：这是一场"教科书式的以赛代练"。</b>赛前定的口径是 1:45-1:50、前半 HR≤165、全程不上 175、末 3km 禁冲。实际 <b>1:48:19</b> 落在区间内（偏慢端），均配 5′03″、均心率 162（比合肥 174 低 12 跳），训练负荷 414（合肥 497，少 83）——<b>该降的档全部降下来了，没有把身体烧掉，黄山 11/29 的窗口保住了。</b>
+  </div>
+  <div class="warn">
+    <b>两处没做到，都出在"人多的比赛氛围"上：</b>① <b>KM16-20 有一段 5km 掉到 5′18″</b>，其中 KM19 单公里 5′38″；② <b>最后 0.48km 冲到 4′18″、HR 179（最高 184）</b>，越过了"175 硬顶"和"末 3km 禁冲"两条线。都不是能力问题，是管理问题 —— 掉速段心率反而从 166 降到 159，说明腿先软；冲刺段纯粹是终点气氛带动。下次以赛代练请把 175 当红线，而不是目标。
+  </div>
+</div>
+
+<div class="card">
+  <h2>配速 × 心率（每公里）</h2>
+  <div id="wrapPace">
+<svg viewBox="0 0 680 248" width="100%" style="max-width:680px;display:block;margin:0 auto" role="img" aria-label="每公里配速与心率">
+<line x1="64" y1="22.0" x2="636" y2="22.0" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="26.0" text-anchor="end" font-size="11" fill="#8b93a7">4′10″</text>
+<line x1="64" y1="62.6" x2="636" y2="62.6" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="66.6" text-anchor="end" font-size="11" fill="#8b93a7">4′30″</text>
+<line x1="64" y1="103.3" x2="636" y2="103.3" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="107.3" text-anchor="end" font-size="11" fill="#8b93a7">4′50″</text>
+<line x1="64" y1="143.9" x2="636" y2="143.9" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="147.9" text-anchor="end" font-size="11" fill="#8b93a7">5′10″</text>
+<line x1="64" y1="184.5" x2="636" y2="184.5" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="188.5" text-anchor="end" font-size="11" fill="#8b93a7">5′30″</text>
+<line x1="64" y1="215.0" x2="636" y2="215.0" stroke="#2a2d3a" stroke-width="0.6" stroke-dasharray="2,5" opacity="0.7"/>
+<text x="642" y="219.0" text-anchor="start" font-size="11" fill="#8b93a7">140</text>
+<line x1="64" y1="172.1" x2="636" y2="172.1" stroke="#2a2d3a" stroke-width="0.6" stroke-dasharray="2,5" opacity="0.7"/>
+<text x="642" y="176.1" text-anchor="start" font-size="11" fill="#8b93a7">150</text>
+<line x1="64" y1="129.2" x2="636" y2="129.2" stroke="#2a2d3a" stroke-width="0.6" stroke-dasharray="2,5" opacity="0.7"/>
+<text x="642" y="133.2" text-anchor="start" font-size="11" fill="#8b93a7">160</text>
+<line x1="64" y1="86.3" x2="636" y2="86.3" stroke="#2a2d3a" stroke-width="0.6" stroke-dasharray="2,5" opacity="0.7"/>
+<text x="642" y="90.3" text-anchor="start" font-size="11" fill="#8b93a7">170</text>
+<line x1="64" y1="43.4" x2="636" y2="43.4" stroke="#2a2d3a" stroke-width="0.6" stroke-dasharray="2,5" opacity="0.7"/>
+<text x="642" y="47.4" text-anchor="start" font-size="11" fill="#8b93a7">180</text>
+<text x="77.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">1</text>
+<text x="103.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">2</text>
+<text x="129.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">3</text>
+<text x="155.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">4</text>
+<text x="181.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">5</text>
+<text x="207.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">6</text>
+<text x="233.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">7</text>
+<text x="259.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">8</text>
+<text x="285.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">9</text>
+<text x="311.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">10</text>
+<text x="337.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">11</text>
+<text x="363.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">12</text>
+<text x="389.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">13</text>
+<text x="415.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">14</text>
+<text x="441.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">15</text>
+<text x="467.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">16</text>
+<text x="493.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">17</text>
+<text x="519.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">18</text>
+<text x="545.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">19</text>
+<text x="571.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">20</text>
+<text x="597.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">21</text>
+<text x="623.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">尾段</text>
+<line x1="64" y1="64.9" x2="636" y2="64.9" stroke="#e5484d" stroke-width="1" stroke-dasharray="6,4" opacity="0.65"/>
+<text x="68" y="60.9" font-size="10" fill="#e5484d">175 硬顶</text>
+<polyline points="77.0,133.5 103.0,205.9 129.0,170.3 155.0,124.8 181.0,131.1 207.0,116.3 233.0,115.9 259.0,130.3 285.0,104.3 311.0,106.5 337.0,106.9 363.0,104.7 389.0,114.6 415.0,106.3 441.0,110.8 467.0,134.3 493.0,154.7 519.0,137.8 545.0,201.4 571.0,168.3 597.0,71.8 623.0,37.2" fill="none" stroke="#e5484d" stroke-width="2.4" stroke-linejoin="round"/>
+<polyline points="77.0,202.1 103.0,150.7 129.0,159.2 155.0,133.5 181.0,124.9 207.0,120.6 233.0,120.6 259.0,99.2 285.0,116.4 311.0,107.8 337.0,103.5 363.0,103.5 389.0,103.5 415.0,103.5 441.0,107.8 467.0,120.6 493.0,112.1 519.0,116.4 545.0,133.5 571.0,133.5 597.0,99.2 623.0,47.7" fill="none" stroke="#2f6fed" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="77.0" cy="133.5" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="77.0" cy="202.1" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="103.0" cy="205.9" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="103.0" cy="150.7" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="129.0" cy="170.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="129.0" cy="159.2" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="155.0" cy="124.8" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="155.0" cy="133.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="181.0" cy="131.1" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="181.0" cy="124.9" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="207.0" cy="116.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="207.0" cy="120.6" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="233.0" cy="115.9" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="233.0" cy="120.6" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="259.0" cy="130.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="259.0" cy="99.2" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="285.0" cy="104.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="285.0" cy="116.4" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="311.0" cy="106.5" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="311.0" cy="107.8" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="337.0" cy="106.9" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="337.0" cy="103.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="363.0" cy="104.7" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="363.0" cy="103.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="389.0" cy="114.6" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="389.0" cy="103.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="415.0" cy="106.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="415.0" cy="103.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="441.0" cy="110.8" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="441.0" cy="107.8" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="467.0" cy="134.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="467.0" cy="120.6" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="493.0" cy="154.7" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="493.0" cy="112.1" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="519.0" cy="137.8" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="519.0" cy="116.4" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="545.0" cy="201.4" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="545.0" cy="133.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="571.0" cy="168.3" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="571.0" cy="133.5" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="597.0" cy="71.8" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="597.0" cy="99.2" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<circle cx="623.0" cy="37.2" r="2.8" fill="#fff" stroke="#e5484d" stroke-width="1.8"/>
+<circle cx="623.0" cy="47.7" r="2.8" fill="#fff" stroke="#2f6fed" stroke-width="1.8"/>
+<rect x="452" y="3" width="10" height="3" fill="#e5484d"/><text x="466" y="10" font-size="11" fill="#9aa3b8">配速(左·快=上)</text>
+<rect x="572" y="3" width="10" height="3" fill="#2f6fed"/><text x="586" y="10" font-size="11" fill="#9aa3b8">心率(右)</text>
+</svg>
+<canvas id="chartPace" height="110" style="display:none"></canvas>
+  </div>
+  <div class="info" style="margin-top:14px;">
+    <b>结构判读：慢起 → 稳住 → 掉一段 → 冲一段，标准的"以赛代练形态"，不是成绩形态。</b>
+    KM1-3（5′05″/5′40″/5′23″）是被人流限速，HR 143-155，很正常；KM4-15 稳定在 4′51″-5′05″、HR 159-167，这一段是全程质量最高的 12km；KM16-20 逐步掉到 5′22″；KM21 又拉回 4′34″。
+    <br><b>心率曲线几乎零漂移：</b>KM6-18 锁在 162-167 整整 13km，配速从 4′56″ 到 5′07″ 来回摆动，心率却纹丝不动 —— 这是有氧底子扎实的直接证据，也说明今天气温/露点对散热完全友好（对比 11/13 室内跑步机同样的配速带 +18bpm 漂移，室外凉爽环境直接反过来）。
+  </div>
+</div>
+
+<div class="card">
+  <h2>步频 × 步幅</h2>
+  <div id="wrapCad">
+<svg viewBox="0 0 680 248" width="100%" style="max-width:680px;display:block;margin:0 auto" role="img" aria-label="每公里步频与步幅">
+<line x1="64" y1="215.0" x2="636" y2="215.0" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="219.0" text-anchor="end" font-size="11" fill="#8b93a7">182</text>
+<line x1="64" y1="166.8" x2="636" y2="166.8" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="170.8" text-anchor="end" font-size="11" fill="#8b93a7">186</text>
+<line x1="64" y1="118.5" x2="636" y2="118.5" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="122.5" text-anchor="end" font-size="11" fill="#8b93a7">190</text>
+<line x1="64" y1="70.2" x2="636" y2="70.2" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="74.2" text-anchor="end" font-size="11" fill="#8b93a7">194</text>
+<line x1="64" y1="22.0" x2="636" y2="22.0" stroke="#2a2d3a" stroke-width="1"/>
+<text x="58" y="26.0" text-anchor="end" font-size="11" fill="#8b93a7">198</text>
+<text x="642" y="219.0" text-anchor="start" font-size="11" fill="#8b93a7">90</text>
+<text x="642" y="173.0" text-anchor="start" font-size="11" fill="#8b93a7">100</text>
+<text x="642" y="127.1" text-anchor="start" font-size="11" fill="#8b93a7">110</text>
+<text x="642" y="81.1" text-anchor="start" font-size="11" fill="#8b93a7">120</text>
+<text x="642" y="35.2" text-anchor="start" font-size="11" fill="#8b93a7">130</text>
+<text x="77.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">1</text>
+<text x="103.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">2</text>
+<text x="129.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">3</text>
+<text x="155.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">4</text>
+<text x="181.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">5</text>
+<text x="207.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">6</text>
+<text x="233.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">7</text>
+<text x="259.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">8</text>
+<text x="285.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">9</text>
+<text x="311.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">10</text>
+<text x="337.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">11</text>
+<text x="363.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">12</text>
+<text x="389.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">13</text>
+<text x="415.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">14</text>
+<text x="441.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">15</text>
+<text x="467.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">16</text>
+<text x="493.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">17</text>
+<text x="519.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">18</text>
+<text x="545.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">19</text>
+<text x="571.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">20</text>
+<text x="597.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">21</text>
+<text x="623.0" y="236" text-anchor="middle" font-size="9.5" fill="#8b93a7">尾段</text>
+<rect x="68.5" y="118.5" width="17" height="96.5" fill="#4a5a8a" opacity="0.85"/>
+<text x="77.0" y="130.5" text-anchor="middle" font-size="9" fill="#e8ecf4">190</text>
+<rect x="94.5" y="154.7" width="17" height="60.3" fill="#4a5a8a" opacity="0.85"/>
+<text x="103.0" y="166.7" text-anchor="middle" font-size="9" fill="#e8ecf4">187</text>
+<rect x="120.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="129.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="146.5" y="82.3" width="17" height="132.7" fill="#4a5a8a" opacity="0.85"/>
+<text x="155.0" y="94.3" text-anchor="middle" font-size="9" fill="#e8ecf4">193</text>
+<rect x="172.5" y="130.6" width="17" height="84.4" fill="#4a5a8a" opacity="0.85"/>
+<text x="181.0" y="142.6" text-anchor="middle" font-size="9" fill="#e8ecf4">189</text>
+<rect x="198.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="207.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="224.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="233.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="250.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="259.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="276.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="285.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="302.5" y="82.3" width="17" height="132.7" fill="#4a5a8a" opacity="0.85"/>
+<text x="311.0" y="94.3" text-anchor="middle" font-size="9" fill="#e8ecf4">193</text>
+<rect x="328.5" y="82.3" width="17" height="132.7" fill="#4a5a8a" opacity="0.85"/>
+<text x="337.0" y="94.3" text-anchor="middle" font-size="9" fill="#e8ecf4">193</text>
+<rect x="354.5" y="70.2" width="17" height="144.8" fill="#4a5a8a" opacity="0.85"/>
+<text x="363.0" y="82.2" text-anchor="middle" font-size="9" fill="#e8ecf4">194</text>
+<rect x="380.5" y="106.4" width="17" height="108.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="389.0" y="118.4" text-anchor="middle" font-size="9" fill="#e8ecf4">191</text>
+<rect x="406.5" y="58.2" width="17" height="156.8" fill="#4a5a8a" opacity="0.85"/>
+<text x="415.0" y="70.2" text-anchor="middle" font-size="9" fill="#e8ecf4">195</text>
+<rect x="432.5" y="58.2" width="17" height="156.8" fill="#4a5a8a" opacity="0.85"/>
+<text x="441.0" y="70.2" text-anchor="middle" font-size="9" fill="#e8ecf4">195</text>
+<rect x="458.5" y="82.3" width="17" height="132.7" fill="#4a5a8a" opacity="0.85"/>
+<text x="467.0" y="94.3" text-anchor="middle" font-size="9" fill="#e8ecf4">193</text>
+<rect x="484.5" y="106.4" width="17" height="108.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="493.0" y="118.4" text-anchor="middle" font-size="9" fill="#e8ecf4">191</text>
+<rect x="510.5" y="94.4" width="17" height="120.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="519.0" y="106.4" text-anchor="middle" font-size="9" fill="#e8ecf4">192</text>
+<rect x="536.5" y="166.8" width="17" height="48.2" fill="#4a5a8a" opacity="0.85"/>
+<text x="545.0" y="178.8" text-anchor="middle" font-size="9" fill="#e8ecf4">186</text>
+<rect x="562.5" y="142.6" width="17" height="72.4" fill="#4a5a8a" opacity="0.85"/>
+<text x="571.0" y="154.6" text-anchor="middle" font-size="9" fill="#e8ecf4">188</text>
+<rect x="588.5" y="118.5" width="17" height="96.5" fill="#4a5a8a" opacity="0.85"/>
+<text x="597.0" y="130.5" text-anchor="middle" font-size="9" fill="#e8ecf4">190</text>
+<rect x="614.5" y="106.4" width="17" height="108.6" fill="#4a5a8a" opacity="0.85"/>
+<text x="623.0" y="118.4" text-anchor="middle" font-size="9" fill="#e8ecf4">191</text>
+<polyline points="77.0,150.7 103.0,196.6 129.0,178.2 155.0,155.3 181.0,146.1 207.0,141.5 233.0,146.1 259.0,150.7 285.0,136.9 311.0,136.9 337.0,136.9 363.0,136.9 389.0,136.9 415.0,141.5 441.0,150.7 467.0,159.9 493.0,164.5 519.0,150.7 545.0,187.4 571.0,169.0 597.0,95.5 623.0,40.4" fill="none" stroke="#f5a623" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="77.0" cy="150.7" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="103.0" cy="196.6" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="129.0" cy="178.2" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="155.0" cy="155.3" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="181.0" cy="146.1" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="207.0" cy="141.5" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="233.0" cy="146.1" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="259.0" cy="150.7" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="285.0" cy="136.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="311.0" cy="136.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="337.0" cy="136.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="363.0" cy="136.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="389.0" cy="136.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="415.0" cy="141.5" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="441.0" cy="150.7" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="467.0" cy="159.9" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="493.0" cy="164.5" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="519.0" cy="150.7" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="545.0" cy="187.4" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="571.0" cy="169.0" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="597.0" cy="95.5" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<circle cx="623.0" cy="40.4" r="2.6" fill="#fff" stroke="#f5a623" stroke-width="1.8"/>
+<rect x="452" y="3" width="10" height="3" fill="#4a5a8a"/><text x="466" y="10" font-size="11" fill="#9aa3b8">步频(左)</text>
+<rect x="572" y="3" width="10" height="3" fill="#f5a623"/><text x="586" y="10" font-size="11" fill="#9aa3b8">步幅cm(右)</text>
+</svg>
+<canvas id="chartCad" height="110" style="display:none"></canvas>
+  </div>
+  <div class="note" style="margin-top:14px;">
+    步频 186-195 全程锁定（均 191、最高 215），步幅 104cm —— <b>比合肥（196/110cm）低一档，正好是 5′03″ 配速该有的比例</b>，说明今天没有靠拉步幅硬撑。
+    <br><b>掉速段的机械特征很清楚：</b>KM14-15 是步频峰值（195），KM19 掉到 186、步幅 96cm、触地 244ms（前 15km 均 217ms）。<b>步频降 + 步幅缩 + 触地拉长，是典型的"肌肉疲劳型降速"</b>，不是心率顶不住（同期 HR 只有 159）。而 KM21 立刻回到 4′34″ / 步幅 116cm，证明储备还在 —— 那段掉速是节奏断点 + 补给，不是崩盘。
+  </div>
+</div>
+
+<div class="card">
+  <h2>每公里分段</h2>
+  <table>
+    <tr><th>公里</th><th>用时</th><th>配速</th><th>HR</th><th>步频</th><th>步幅</th><th>触地</th><th>备注</th></tr>
+<tr><td>1</td><td>5′05″</td><td>5′05″</td><td>143</td><td>190</td><td>104cm</td><td>214ms</td><td style="color:#8b93a7;font-size:12px">起跑拥堵</td></tr>
+<tr><td>2</td><td>5′40″</td><td class="slow">5′40″</td><td>155</td><td>187</td><td>94cm</td><td>231ms</td><td style="color:#8b93a7;font-size:12px">人群限速</td></tr>
+<tr><td>3</td><td>5′23″</td><td class="slow">5′23″</td><td>153</td><td>192</td><td>98cm</td><td>231ms</td><td style="color:#8b93a7;font-size:12px">过桥前</td></tr>
+<tr><td>4</td><td>5′01″</td><td>5′01″</td><td>159</td><td>193</td><td>103cm</td><td>224ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>5</td><td>5′04″</td><td>5′04″</td><td>161</td><td>189</td><td>105cm</td><td>229ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>6</td><td>4′56″</td><td>4′56″</td><td>162</td><td>192</td><td>106cm</td><td>223ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>7</td><td>4′56″</td><td>4′56″</td><td>162</td><td>192</td><td>105cm</td><td>219ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>8</td><td>5′03″</td><td>5′03″</td><td>167</td><td>192</td><td>104cm</td><td>217ms</td><td style="color:#8b93a7;font-size:12px">过橘子洲大桥 +16m</td></tr>
+<tr><td>9</td><td>4′51″</td><td class="fast">4′51″</td><td>163</td><td>192</td><td>107cm</td><td>215ms</td><td style="color:#8b93a7;font-size:12px">下桥</td></tr>
+<tr><td>10</td><td>4′52″</td><td class="fast">4′52″</td><td>165</td><td>193</td><td>107cm</td><td>216ms</td><td style="color:#8b93a7;font-size:12px">加速段</td></tr>
+<tr><td>11</td><td>4′52″</td><td class="fast">4′52″</td><td>166</td><td>193</td><td>107cm</td><td>217ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>12</td><td>4′51″</td><td class="fast">4′51″</td><td>166</td><td>194</td><td>107cm</td><td>217ms</td><td style="color:#8b93a7;font-size:12px">最快稳定段</td></tr>
+<tr><td>13</td><td>4′56″</td><td>4′56″</td><td>166</td><td>191</td><td>107cm</td><td>218ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>14</td><td>4′51″</td><td class="fast">4′51″</td><td>166</td><td>195</td><td>106cm</td><td>215ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>15</td><td>4′54″</td><td>4′54″</td><td>165</td><td>195</td><td>104cm</td><td>214ms</td><td style="color:#8b93a7;font-size:12px">末段稳定</td></tr>
+<tr><td>16</td><td>5′05″</td><td>5′05″</td><td>162</td><td>193</td><td>102cm</td><td>219ms</td><td style="color:#8b93a7;font-size:12px">开始掉速</td></tr>
+<tr><td>17</td><td>5′15″</td><td class="slow">5′15″</td><td>164</td><td>191</td><td>101cm</td><td>219ms</td><td style="color:#8b93a7;font-size:12px">上坡 +11m</td></tr>
+<tr><td>18</td><td>5′07″</td><td>5′07″</td><td>163</td><td>192</td><td>104cm</td><td>211ms</td><td style="color:#8b93a7;font-size:12px"></td></tr>
+<tr><td>19</td><td>5′38″</td><td class="slow">5′38″</td><td>159</td><td>186</td><td>96cm</td><td>244ms</td><td style="color:#8b93a7;font-size:12px">腿沉 5′38″</td></tr>
+<tr><td>20</td><td>5′22″</td><td class="slow">5′22″</td><td>159</td><td>188</td><td>100cm</td><td>230ms</td><td style="color:#8b93a7;font-size:12px">恢复中</td></tr>
+<tr><td>21</td><td>4′34″</td><td class="fast">4′34″</td><td>167</td><td>190</td><td>116cm</td><td>203ms</td><td style="color:#8b93a7;font-size:12px">重新提速</td></tr>
+<tr><td>尾段</td><td>2′02″</td><td class="fast">4′18″</td><td>179</td><td>191</td><td>128cm</td><td>183ms</td><td style="color:#8b93a7;font-size:12px">末段冲刺</td></tr>
+  </table>
+  <div class="sub" style="margin-top:8px;">红底 = 快于 4′52″（KM9-14 稳定段）；绿底 = 慢于 5′15″。心率区间（Coros）：132-149: 1% · 132-149: 4% · 150-157: 10% · 158-168: 78% · 169-175: 5% · 175-255: 2%。</div>
+  <div style="margin-top:14px;">
+    <div class="sub" style="margin-bottom:6px;">HR 区间时间分布</div>
+    <div class="bar">
+      <div style="flex:5;background:#2e9e5b">132-149 · 5%</div>
+      <div style="flex:11;background:#3d7a6b">150-157 · 11%</div>
+      <div style="flex:78;background:#4a5a8a">158-168 · 78%</div>
+      <div style="flex:5;background:#c07a2a">169-175 · 5%</div>
+      <div style="flex:2;background:#e5484d">175+ · 2%</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>五段结构与分段统计</h2>
+  <table>
+    <tr><th>段落</th><th>距离</th><th>用时</th><th>配速</th><th>HR</th><th>步频</th><th>步幅</th><th>触地</th></tr>
+<tr><td>0-5 km</td><td>5.00 km</td><td>26′12″</td><td>5′14″/km</td><td>154</td><td>190</td><td>101cm</td><td>226ms</td></tr>
+<tr><td>5-10 km</td><td>5.00 km</td><td>24′38″</td><td>4′56″/km</td><td>164</td><td>192</td><td>106cm</td><td>218ms</td></tr>
+<tr><td>10-15 km</td><td>5.00 km</td><td>24′23″</td><td>4′53″/km</td><td>166</td><td>193</td><td>106cm</td><td>216ms</td></tr>
+<tr><td>15-20 km</td><td>5.00 km</td><td>26′28″</td><td>5′18″/km</td><td>161</td><td>190</td><td>100cm</td><td>225ms</td></tr>
+<tr><td>20 km-终点</td><td>1.48 km</td><td>6′37″</td><td>4′29″/km</td><td>171</td><td>190</td><td>120cm</td><td>197ms</td></tr>
+  </table>
+  <div class="kv">
+    <div><span>前半程</span> <b>54′27″</b> · HR 159</div>
+    <div><span>后半程</span> <b>53′51″</b> · HR 164</div>
+    <div><span>负分割</span> <b>36″</b></div>
+  </div>
+  <div class="warn" style="margin-top:12px;">
+    <b>掉速窗口定位：KM16-20，均配 5′18″（比 KM10-15 慢 25 秒/km）。</b>同期心率 159-164 反而低于 10-15km 的 166，步频 186-193、步幅 96-104、触地 211-244ms —— <b>心率降 + 步频掉 + 触地拉长 = 肌肉先没劲，不是心肺到顶</b>。爬升只 +8m（KM19），坡不是主因。真实原因排序：① 合肥 PB 后第 7 天，肌肉仍在还账；② 本周 11/11 14km + 11/13 10km 没让腿完全空；③ KM19 大概在补给站/人群密集段，节奏被打断后没立刻找回。
+  </div>
+</div>
+
+<div class="card">
+  <h2>长沙 vs 合肥：降档是否降对了</h2>
+  <table>
+    <tr><th>指标</th><th>合肥 11/08（PB）</th><th>长沙 11/15（以赛代练）</th><th>差值</th></tr>
+    <tr><td>完赛</td><td>1:38:51</td><td>1:48:19</td><td style="color:#f5a623">+9′28″</td></tr>
+    <tr><td>平均配速</td><td>4′39″</td><td>5′03″</td><td style="color:#f5a623">+24″/km</td></tr>
+    <tr><td>平均心率</td><td>174</td><td>162</td><td style="color:#6fbf8b">−12 bpm</td></tr>
+    <tr><td>训练负荷</td><td>497</td><td>414</td><td style="color:#6fbf8b">−83</td></tr>
+    <tr><td>HR≥175 时间</td><td>45% 区间在 Z5</td><td>2%（仅终点冲刺）</td><td style="color:#6fbf8b">大幅收敛</td></tr>
+    <tr><td>步频 / 步幅</td><td>196 / 110cm</td><td>191 / 104cm</td><td>—</td></tr>
+  </table>
+  <div class="ok" style="margin-top:12px;">
+    <b>结论：降档方向完全正确。</b>用时慢 9 分半、心率低 12 跳、负荷低 83 点 —— 这正是一场"高质量长距离 + 一次比赛体验"该有的代价，而不是"又一次全力冲成绩"。7 天内跑两个半马还能把心率压在 162，说明有氧能力已经上了一个台阶（合肥之前的比赛平均心率都在 170+）。
+  </div>
+</div>
+
+<div class="card">
+  <h2>训练点评</h2>
+  <div class="note">
+    <b>① 以赛代练目标达成度：85%。</b>时间带（1:45-1:50）✅ 1:48:19；前半 HR≤165 ✅ 前 10km 均 158.9；全程不上 175 ❌ 175+ 累计 161 秒，全部集中在最后 300m；末 3km 禁冲 ❌ KM21 4′34″、尾段 4′18″。扣的 15 分全在最后 500 米，其余无可挑剔。
+    <br><b>② 今天的真正收获不是成绩，是"心率零漂移"。</b>13km 配速摆动 16 秒而心率不动（162-167），这在 10 月之前是做不到的。它意味着：黄山如果天气正常（露点 &lt;15℃），你可以在 4′35″-4′40″ 的配速下把心率压到 168-172，而不用像桐庐那样 60% 时间顶在 175+。
+    <br><b>③ 唯一的短板是后程肌肉耐力，不是心肺。</b>KM16-20 掉 25 秒/km 而心率还降了，说明腿的"抗疲劳时长"目前大约在 75-85 分钟。要突破 1:35，必须把这段延长到 95 分钟以上 —— 手段不是加量，是<b>在长距离末段做 3-5km 的配速递进</b>（例如 16km 长距离的最后 4km 提到 4′50″）。
+    <br><b>④ 一周双赛的负荷账要算清楚。</b>11/08 TL497 + 11/15 TL414 = 7 天 684，这是身体真实的承受量。黄山前的 14 天里，训练意图只能是"养 + 一点锐度"，任何一次 250 以上的课都会让 11/29 变成第三场"还账跑"。
+    <br><b>⑤ 数据口径说明。</b>手表距离 21.48km，比标准半马多 376m（起跑绕行 + 切线不完美），所以配速 5′03″ 略"吃亏"；按 21.0975km 折算的净等效为 1:46:25。官方净成绩以组委会芯片为准，出来后可以再校准一次。
+  </div>
+</div>
+
+<div class="card">
+  <h2>赛后 14 天 → 黄山 11/29</h2>
+  <div class="warn">
+    <b>黄山是本赛季最后一个冲成绩窗口（目标 1:36-1:37，需 4′33″-4′36″/km）。</b>前提是这 14 天不犯两个错：一是赛后不休息够，二是赛前堆强度。
+  </div>
+  <table style="margin-top:12px;">
+    <tr><th>日期</th><th>安排</th><th>强度闸门</th></tr>
+    <tr><td>11/16-11/18</td><td><b>全休 3 天</b>（比赛日+3）</td><td>不跑，可散步/拉伸；睡眠优先</td></tr>
+    <tr><td>11/19-11/20</td><td>轻松跑 8-10km ×2</td><td>HR&lt;145，配速 5′45″-6′00″，不追配速</td></tr>
+    <tr><td>11/22</td><td>节奏跑 2×15min</td><td>4′50″-5′00″，HR 168-174，组间慢跑 5min</td></tr>
+    <tr><td>11/24</td><td>长距离 16km（末 4km 递进）</td><td>前 12km 5′15″，末 4km 提到 4′50″</td></tr>
+    <tr><td>11/26</td><td>轻松跑 8km + 4×60m</td><td>HR&lt;145，加速跑只求动作</td></tr>
+    <tr><td>11/27-11/28</td><td>减量：6km 唤醒 / 全休</td><td>HR&lt;140，不做任何强度</td></tr>
+    <tr><td>11/29</td><td><b>黄山半马</b></td><td>前 10km HR≤170、5km 后按体感放，不上 182</td></tr>
+  </table>
+  <div class="info" style="margin-top:12px;">
+    <b>黄山赛道注意：</b>黄山半马爬升明显大于长沙（长沙全程仅 45m），且 11 月底皖南早晨可能 5-10℃。低温对心率有利，但爬坡段心率会被地形抬起来 —— <b>坡上守心率、坡下收配速</b>，不要用地形配速做判据。赛前一周查露点，口径不变：&lt;10℃ 理想 / 10-15℃ 可跑 / &gt;18℃ 只求完赛。
+  </div>
+</div>
+
+<div class="card">
+  <h2>周负荷</h2>
+  <table>
+    <tr><th>自然周</th><th>跑量</th><th>负荷</th><th>构成</th></tr>
+    <tr><td>10/19-10/25</td><td>41.3 km</td><td>773</td><td>含桐庐半马 TL536</td></tr>
+    <tr><td>10/26-11/01</td><td>34.3 km</td><td>363</td><td>赛后恢复 88+226+49</td></tr>
+    <tr><td>11/02-11/08</td><td>45.3 km</td><td>873</td><td>含合肥半马 TL497</td></tr>
+    <tr style="background:rgba(47,111,237,.10)"><td>11/09-11/15</td><td>45.8 km</td><td>684</td><td>11/11 14km(189) + 11/13 跑步机(81) + 长沙( 414 )</td></tr>
+  </table>
+  <div class="sub" style="margin-top:8px;">以赛代练比赛周：比赛距离与负荷不计入红线，非比赛负荷 270/350 ✅ 纪律正常。但真实身体账是 <b>7 天 684 TL</b> —— 这就是 11/16-11/18 必须全休的原因。</div>
+</div>
+
+<div class="card">
+  <h2>数据源</h2>
+  <div class="sub" style="margin:0;">
+    活动 ID 481762369471545347 · 类型 100（跑步）· 2026-11-15 07:12:21 → 08:20:41 · 距离 21476 m · 时长 6499.00 s（pauseTime 0）· 爬升 45.0 m · 平均配速由 距离/时长 反算 302.6 s/km（Coros avgPace 字段返回 0，不可用）· 分段由 frequencyList（6500 点，约 3.3m/点）插值到整公里 · 心率区间取 zoneList(type=126) · 天气：长沙晚报气象台 11/14 发布（15 日多云转阴、分散阵雨概率 60%、14-19℃、北风 2 级）+ 墨迹天气实况（07 时 15℃/湿度约 90%）+ 赛事官方通告（晨 7 时约 13℃、阴、无明显降水）→ 露点约 13-14℃，属"正常可跑"档；Coros 内置 weather 报 12℃/100%（腕表体感，仅参考）<br>
+    赛事：长沙银行·2026 长沙马拉松（第 12 届），07:00 湘江中路杜甫江阁鸣枪，半马终点渔人码头，半马 1.7 万人。<br>
+    报告生成 2026-11-15 10:06
+  </div>
+</div>
+
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  var labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "尾段"], paces = [304.9, 340.5, 323.0, 300.6, 303.7, 296.4, 296.2, 303.3, 290.5, 291.6, 291.8, 290.7, 295.6, 291.5, 293.7, 305.3, 315.3, 307.0, 338.3, 322.0, 274.5, 257.5], hrs = [143, 155, 153, 159, 161, 162, 162, 167, 163, 165, 166, 166, 166, 166, 165, 162, 164, 163, 159, 159, 167, 179], cads = [190, 187, 192, 193, 189, 192, 192, 192, 192, 193, 193, 194, 191, 195, 195, 193, 191, 192, 186, 188, 190, 191], stride = [104, 94, 98, 103, 105, 106, 105, 104, 107, 107, 107, 107, 107, 106, 104, 102, 101, 104, 96, 100, 116, 128];
+  function paceLabel(v){var m=Math.floor(v/60),s=Math.round(v%60);return m+"'"+(s<10?'0':'')+s+'"';}
+  var w1=document.getElementById('wrapPace'), w2=document.getElementById('wrapCad');
+  if(w1){
+    w1.querySelector('svg').style.display='none';
+    var c=w1.querySelector('canvas'); c.style.display='block';
+    new Chart(c,{type:'line',data:{labels:labels,datasets:[
+      {label:'配速',data:paces,borderColor:'#e5484d',backgroundColor:'#e5484d',yAxisID:'y1',pointRadius:3,tension:.2},
+      {label:'心率',data:hrs,borderColor:'#2f6fed',backgroundColor:'#2f6fed',yAxisID:'y2',pointRadius:3,tension:.2}]},
+      options:{plugins:{legend:{labels:{color:'#9aa3b8'}}},scales:{
+        x:{ticks:{color:'#9aa3b8'},grid:{color:'#2a2d3a'}},
+        y1:{reverse:true,min:250,max:345,ticks:{color:'#9aa3b8',callback:paceLabel},grid:{color:'#2a2d3a'}},
+        y2:{position:'right',min:140,max:185,ticks:{color:'#9aa3b8'},grid:{display:false}} }}});
+  }
+  if(w2){
+    w2.querySelector('svg').style.display='none';
+    var c2=w2.querySelector('canvas'); c2.style.display='block';
+    new Chart(c2,{type:'bar',data:{labels:labels,datasets:[
+      {label:'步频',data:cads,backgroundColor:'#4a5a8a',yAxisID:'y1'},
+      {label:'步幅',type:'line',data:stride,borderColor:'#f5a623',backgroundColor:'#f5a623',yAxisID:'y2',pointRadius:3,tension:.2}]},
+      options:{plugins:{legend:{labels:{color:'#9aa3b8'}}},scales:{
+        x:{ticks:{color:'#9aa3b8'},grid:{display:false}},
+        y1:{min:182,max:198,ticks:{color:'#9aa3b8'},grid:{color:'#2a2d3a'}},
+        y2:{position:'right',min:90,max:132,ticks:{color:'#9aa3b8'},grid:{display:false}} }}});
+  }
+})();
+</script>
+</body>
+</html>
